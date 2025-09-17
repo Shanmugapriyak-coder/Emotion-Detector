@@ -55,7 +55,7 @@ class CNN(nn.Module):
 
 # Instantiate the model
 model = CNN()
-model.load_state_dict(torch.load(r'C:\Users\MY Laptop\Desktop\guvi_class\emotion detection app\emotion_cnn_model.pth'))
+model.load_state_dict(torch.load(r'emotion_cnn_model.pth'))
 
 # Set Streamlit page config
 st.set_page_config(page_title="Facial Emotion Detector", layout="centered")
@@ -108,3 +108,4 @@ if uploaded_file is not None:
 
     st.success(f"✅ **Detected Emotion:** {emotion_list[predicted_class]}")
     # st.bar_chart(prediction[0])
+
